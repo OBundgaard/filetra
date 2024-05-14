@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Upload</h3>
+    <form action = "/upload" method = "post" enctype="multipart/form-data">
+        <input type="file" name="file" /><br><br>
+        <input type = "submit" value="Upload">
+    </form><br>
+    <hr>
+    <h3>Download</h3>
+    <ul>
+        {% for file in files %}
+            <li>
+                <a href="/download?filename={{ file }}">
+                    {{ file }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

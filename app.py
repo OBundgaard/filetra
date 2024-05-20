@@ -40,7 +40,12 @@ def upload_file():
         args = request.args
 
         file = request.files['file']
-        file_path = f'./files/{args['group_id']}/{file.filename}'
+
+        name = file.filename
+        if '/' in name:
+            name = file.filename[name.rfind('/') + 1:]
+
+        file_path = f'./files/{args['group_id']}/{name}'
 
         # If the file exists, add the count to the name: e.g. "cat (1).jpg"
         if os.path.isfile(file_path):
@@ -61,6 +66,33 @@ def download_file():
     if request.method == 'GET':
         args = request.args
         return send_from_directory(f'./files/{args['group_id']}', args['filename'], as_attachment=True)
+
+
+# == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    return "Signup"
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return "Login"
+
+
+@app.route('/account/<user_id>', methods=['GET'])
+def account(user_id):
+    return f'User: {user_id}'
+
+
+@app.route('/group/<group_id>', methods=['GET'])
+def group(group_id):
+    return f'Group: {group_id}'
+
+
+@app.route('/group/<group_id>/folder/<folder_id>', methods=['GET'])
+def folder(group_id, folder_id):
+    return f'Group: {group_id} - Folder: {folder_id}'
+# == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 
 if __name__ == '__main__':

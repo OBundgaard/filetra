@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="Added requirements.txt">
-      <change afterPath="$PROJECT_DIR$/crypto_utils.py" afterDir="false" />
+    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="Upload and download is now working for the basics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +19,16 @@
         <option value="Flask Main" />
         <option value="package.json" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -41,9 +47,11 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Flask server.filetra.executor": "Run",
+    "Python.utils.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "hashing__and__salt",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/olive/PycharmProjects/filetra/files/3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,10 +107,8 @@
       <updated>1715675917943</updated>
       <workItem from="1715675929777" duration="4271000" />
       <workItem from="1715692129722" duration="22000" />
-      <workItem from="1715847061173" duration="10055000" />
-      <workItem from="1715858043032" duration="39000" />
-      <workItem from="1715864020044" duration="5000" />
-      <workItem from="1716191069779" duration="3673000" />
+      <workItem from="1715847061173" duration="8918000" />
+      <workItem from="1716278903535" duration="776000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -120,23 +126,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715680278489</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added basic restricted access to view, download, and upload">
-      <option name="closed" value="true" />
-      <created>1715857160775</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715857160775</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added requirements.txt">
-      <option name="closed" value="true" />
-      <created>1715858075284</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1715858075284</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,11 +135,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Upload and download is now working for the basics" />
-    <MESSAGE value="Added basic restricted access to view, download, and upload" />
-    <MESSAGE value="Added requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload and download is now working for the basics" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716197786457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1715855485227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/filetra$utils.coverage" NAME="utils Coverage Results" MODIFIED="1716280582081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

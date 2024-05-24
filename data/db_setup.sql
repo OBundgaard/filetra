@@ -10,6 +10,12 @@ CREATE TABLE users (
 	usr_name varchar(128),
 );
 
+CREATE TABLE salts (
+	slt_id int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	usr_id varchar(36) NOT NULL FOREIGN KEY REFERENCES users(usr_id),
+	slt_salt varchar(64) NOT NULL
+);
+
 CREATE TABLE groups (
 	grp_id varchar(36) NOT NULL PRIMARY KEY,
 	grp_name varchar(255) NOT NULL,

@@ -1,0 +1,100 @@
+Index: data/db_dummy.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>USE filetra;\r\nGO\r\n\r\nINSERT INTO users\r\nVALUES ('319e16c9-5304-4d9b-9eb8-0ec9392991ac', 'oliver@filetra.com', '3c372e9d26e7d5089e136de211a889bcaf7b6b71f03b68142c881e3cc2921a58', 'Oliver');\r\n\r\nINSERT INTO users\r\nVALUES ('1b457b3d-9634-4653-aa00-e99448c76e55', 'maamoun@filetra.com', 'ba747c6d59fc01a92fb1ac8395170d456fac50224b0655a2543fe59f00780b31', 'Maamoun');\r\n\r\nINSERT INTO users\r\nVALUES ('1de3c2bc-4777-438d-963b-1c985d884c06', 'test@filetra.com', '9755b1d694e7fe516b7b2cefad3ae966d6d2e4ac446b44c758fd801195fae441', 'Test');\r\n\r\nINSERT INTO groups\r\nVALUES ('91a13777-c539-464e-b1a1-d9cd7aa55562', 'Memes', '1b457b3d-9634-4653-aa00-e99448c76e55');\r\n\r\nINSERT INTO groups\r\nVALUES ('5211bc5d-0fff-46d1-8516-b2c1f893f3df', 'Birds', '1de3c2bc-4777-438d-963b-1c985d884c06');\r\n\r\nINSERT INTO groups\r\nVALUES ('ec46d697-4163-42fe-ac2a-f6b722396221', 'Poetry', '319e16c9-5304-4d9b-9eb8-0ec9392991ac');\r\n\r\nINSERT INTO directories\r\nVALUES ('17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097', 'Pet memes', '91a13777-c539-464e-b1a1-d9cd7aa55562');\r\n\r\nINSERT INTO directories\r\nVALUES ('42d7175e-03e3-45a0-9c95-2aa5b33b7479', 'Other memes', '91a13777-c539-464e-b1a1-d9cd7aa55562');\r\n\r\nINSERT INTO directories\r\nVALUES ('e1a437f0-f132-4c56-b1a4-1eda067fa7d0', 'Not mallards', '5211bc5d-0fff-46d1-8516-b2c1f893f3df');\r\n\r\nINSERT INTO salts\r\nVALUES ('319e16c9-5304-4d9b-9eb8-0ec9392991ac', '2d4fbe77bd449bc25b26d3aeeee8ca01f61cb7a76f07993805432311d10426d2');\r\n\r\nINSERT INTO salts\r\nVALUES ('1b457b3d-9634-4653-aa00-e99448c76e55', '2feb7ba45cc59554edbd712a3c8095e91c46929a2b91f9108287d6eb1f8fe227');\r\n\r\nINSERT INTO salts\r\nVALUES ('1de3c2bc-4777-438d-963b-1c985d884c06', 'a728c4e6166131e8e7b542c168cce42f723678341bc2344eb3d3c9e40272ca97');
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/db_dummy.sql b/data/db_dummy.sql
+--- a/data/db_dummy.sql	(revision 4fcc04048e5cc805340b88d3c5ccb4dfb498032e)
++++ b/data/db_dummy.sql	(date 1716796532112)
+@@ -17,7 +17,7 @@
+ VALUES ('5211bc5d-0fff-46d1-8516-b2c1f893f3df', 'Birds', '1de3c2bc-4777-438d-963b-1c985d884c06');
+ 
+ INSERT INTO groups
+-VALUES ('ec46d697-4163-42fe-ac2a-f6b722396221', 'Poetry', '319e16c9-5304-4d9b-9eb8-0ec9392991ac');
++VALUES ('3', 'Poetry', '319e16c9-5304-4d9b-9eb8-0ec9392991ac');
+ 
+ INSERT INTO directories
+ VALUES ('17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097', 'Pet memes', '91a13777-c539-464e-b1a1-d9cd7aa55562');
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299\" name=\"Changes\" comment=\"Added db dummy data script\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Flask Main\" />\r\n        <option value=\"package.json\" />\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2gS0xRdVhbY31lXIaNgERNqFQNo\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;Flask server.filetra.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.crypto_utils.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.utils.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/olive/PycharmProjects/filetra/files/3&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\files\\3\" />\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\files\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\files\\91a13777-c539-464e-b1a1-d9cd7aa55562\\17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097\" />\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\data\" />\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\files\\2\" />\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\files\\1\" />\r\n      <recent name=\"C:\\Users\\olive\\PycharmProjects\\filetra\\files\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"filetra\" type=\"Python.FlaskServer\">\r\n      <module name=\"filetra\" />\r\n      <option name=\"target\" value=\"$PROJECT_DIR$/app.py\" />\r\n      <option name=\"targetType\" value=\"PATH\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299\" name=\"Changes\" comment=\"\" />\r\n      <created>1715675917943</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1715675917943</updated>\r\n      <workItem from=\"1715675929777\" duration=\"4271000\" />\r\n      <workItem from=\"1715692129722\" duration=\"22000\" />\r\n      <workItem from=\"1715847061173\" duration=\"8918000\" />\r\n      <workItem from=\"1716278903535\" duration=\"776000\" />\r\n      <workItem from=\"1716290928125\" duration=\"3398000\" />\r\n      <workItem from=\"1716367115776\" duration=\"34000\" />\r\n      <workItem from=\"1716367963624\" duration=\"48000\" />\r\n      <workItem from=\"1716537386832\" duration=\"174000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715676073429</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715676073429</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Upload and download is now working for the basics\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715680278489</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715680278489</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added docs to the uuid generation method\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716280663645</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716280663645</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Added db setup script in SQL\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716287431037</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716287431037</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Added db dummy data script\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716537553675</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716537553675</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"First commit\" />\r\n    <MESSAGE value=\"Upload and download is now working for the basics\" />\r\n    <MESSAGE value=\"Added docs to the uuid generation method\" />\r\n    <MESSAGE value=\"Added db setup script in SQL\" />\r\n    <MESSAGE value=\"Added db dummy data script\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added db dummy data script\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/filetra$crypto_utils.coverage\" NAME=\"crypto_utils Coverage Results\" MODIFIED=\"1716292637605\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/filetra$filetra.coverage\" NAME=\"filetra Coverage Results\" MODIFIED=\"1716291359742\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/filetra$utils.coverage\" NAME=\"utils Coverage Results\" MODIFIED=\"1716287051990\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4fcc04048e5cc805340b88d3c5ccb4dfb498032e)
++++ b/.idea/workspace.xml	(date 1716807790891)
+@@ -4,7 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="Added db dummy data script" />
++    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="Added pages for login and signup with css styling">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/db_dummy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_dummy.sql" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -69,11 +72,11 @@
+       <recent name="C:\Users\olive\PycharmProjects\filetra\files" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\olive\PycharmProjects\filetra\templates" />
+       <recent name="C:\Users\olive\PycharmProjects\filetra\files\91a13777-c539-464e-b1a1-d9cd7aa55562\17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097" />
+       <recent name="C:\Users\olive\PycharmProjects\filetra\data" />
+       <recent name="C:\Users\olive\PycharmProjects\filetra\files\2" />
+       <recent name="C:\Users\olive\PycharmProjects\filetra\files\1" />
+-      <recent name="C:\Users\olive\PycharmProjects\filetra\files" />
+     </key>
+   </component>
+   <component name="RunManager">
+@@ -117,6 +120,12 @@
+       <workItem from="1716367115776" duration="34000" />
+       <workItem from="1716367963624" duration="48000" />
+       <workItem from="1716537386832" duration="174000" />
++      <workItem from="1716796264762" duration="110000" />
++      <workItem from="1716796471875" duration="94000" />
++      <workItem from="1716796609093" duration="9000" />
++      <workItem from="1716798757365" duration="173000" />
++      <workItem from="1716800797115" duration="13000" />
++      <workItem from="1716807788656" duration="3000" />
+     </task>
+     <task id="LOCAL-00001" summary="First commit">
+       <option name="closed" value="true" />
+@@ -158,7 +167,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1716537553675</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="Added pages for login and signup with css styling">
++      <option name="closed" value="true" />
++      <created>1716796344663</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1716796344663</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -171,11 +188,12 @@
+     <MESSAGE value="Added docs to the uuid generation method" />
+     <MESSAGE value="Added db setup script in SQL" />
+     <MESSAGE value="Added db dummy data script" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added db dummy data script" />
++    <MESSAGE value="Added pages for login and signup with css styling" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added pages for login and signup with css styling" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/filetra$crypto_utils.coverage" NAME="crypto_utils Coverage Results" MODIFIED="1716292637605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716291359742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716796532150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/filetra$utils.coverage" NAME="utils Coverage Results" MODIFIED="1716287051990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file

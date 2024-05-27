@@ -1,0 +1,330 @@
+/* Regular */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Black */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Black Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Thin */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Thin Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+:root {
+    /* TEXT VARIABLES */
+    --font-family: "Roboto", sans-serif;
+    --font-style: normal;
+    --font-default-size: 12pt;
+    /* COLOR STYLES */
+    --main: #0099CC;
+    --light-main: #6EC1DD;
+    --lighter-main: #DBE9EE;
+    --error: #CC0035;
+    --light-error: #DD6E8B;
+    --lighter-error: #EEDBE0;
+    --dark-text: #1A1A1A;
+    --light-text: #F1F1F1;
+    --fill: #F1F1F1;
+    /* SPACER STYLES */
+    --spacer-1: 8px;
+    --spacer-2: 16px;
+    --spacer-3: 24px;
+    --spacer-4: 32px;
+    --spacer-5: 40px;
+    --spacer-6: 48px;
+    --spacer-7: 56px;
+    --spacer-8: 64px;
+}
+
+html, body {
+    height: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--light-text);
+    background: var(--main);
+  }
+  
+  ::selection {
+    color: var(--light-text);
+    background: var(--main);
+  }
+
+/* TEXT STYLES */
+.paragraph {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-style: var(--font-style);
+    font-size: var(--font-default-size);
+}
+
+.bold-paragraph {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-style: var(--font-style);
+    font-size: var(--font-default-size);
+}
+
+.subtitle {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-style: var(--font-style);
+    font-size: calc(var(--font-default-size) * 1.618);
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-style: var(--font-style);
+    font-size: calc(var(--font-default-size) * (1.618 * 1.618));
+}
+
+/* BUTTON STYLES */
+button, input[type="submit"] {
+    padding: var(--spacer-2) var(--spacer-6);
+    border: none;
+    border-radius: 24px;
+    min-width: 48px;
+    width: fit-content;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    filter: brightness(90%);
+}
+
+button:active, input[type="submit"]:active {
+    filter: brightness(80%);
+}
+
+.primary-button {
+    background-color: var(--main);
+    color: var(--light-text)
+}
+
+.secondary-button {
+    box-shadow: inset 0 0 0 2px var(--main);
+    background-color: transparent;
+    color: var(--main);
+}
+
+.tertiary-button {
+    background-color: transparent;
+    color: var(--main);
+    text-decoration: underline;
+}
+
+.inverted-primary-button {
+    background-color: var(--fill);
+    color: var(--main)
+}
+
+.inverted-secondary-button {
+    box-shadow: inset 0 0 0 2px var(--fill);
+    background-color: transparent;
+    color: var(--fill);
+}
+
+.inverted-tertiary-button {
+    background-color: transparent;
+    color: var(--fill);
+    text-decoration: underline;
+}
+
+/* INPUT STYLES */
+input[type='text'], input[type="password"] {
+    padding: var(--spacer-2);
+    border: none;
+    border-radius: 24px;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+
+    background-color: var(--lighter-main);
+    color: var(--dark-text);
+    width: 512px;
+}
+
+input[type='text'].invalid, input[type="password"].invalid {
+    background-color: var(--lighter-error);
+    color: var(--error);
+}
+
+
+input[type='text']:focus, input[type="password"] {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--light-main);
+    opacity: 1; /* Firefox */
+}
+
+.invalid::placeholder {
+    color: var(--light-error);
+    opacity: 1; /* Firefox */
+} 
+
+/* PANEL STYLES */
+.panel {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.triple-panel {
+    flex: 3;
+}
+
+.double-panel {
+    flex: 2;
+}
+
+.single-panel {
+    flex: 1;
+}
+
+.primary-panel {
+    background-color: var(--fill);
+}
+
+.secondary-panel {
+    background-color: var(--main);
+}
+
+/* FORM STYLE */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-4);
+    align-items: end;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacer-1);
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-2);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-1);
+}
+
+.redirect {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-4);
+    align-items: center;
+}
+
+.redirect-description {
+    display: flex; 
+    flex-direction: column; 
+    gap: var(--spacer-2);
+}

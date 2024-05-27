@@ -11,22 +11,22 @@ INSERT INTO users
 VALUES ('1de3c2bc-4777-438d-963b-1c985d884c06', 'test@filetra.com', '9755b1d694e7fe516b7b2cefad3ae966d6d2e4ac446b44c758fd801195fae441', 'Test');
 
 INSERT INTO groups
-VALUES ('91a13777-c539-464e-b1a1-d9cd7aa55562', 'Memes', '1b457b3d-9634-4653-aa00-e99448c76e55');
+VALUES ('2', 'Memes', '1b457b3d-9634-4653-aa00-e99448c76e55');
 
 INSERT INTO groups
-VALUES ('5211bc5d-0fff-46d1-8516-b2c1f893f3df', 'Birds', '1de3c2bc-4777-438d-963b-1c985d884c06');
+VALUES ('3', 'Birds', '1de3c2bc-4777-438d-963b-1c985d884c06');
 
 INSERT INTO groups
 VALUES ('ec46d697-4163-42fe-ac2a-f6b722396221', 'Poetry', '319e16c9-5304-4d9b-9eb8-0ec9392991ac');
 
 INSERT INTO directories
-VALUES ('17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097', 'Pet memes', '91a13777-c539-464e-b1a1-d9cd7aa55562');
+VALUES ('17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097', 'Pet memes', '2');
 
 INSERT INTO directories
-VALUES ('42d7175e-03e3-45a0-9c95-2aa5b33b7479', 'Other memes', '91a13777-c539-464e-b1a1-d9cd7aa55562');
+VALUES ('42d7175e-03e3-45a0-9c95-2aa5b33b7479', 'Other memes', '2');
 
 INSERT INTO directories
-VALUES ('e1a437f0-f132-4c56-b1a4-1eda067fa7d0', 'Not mallards', '5211bc5d-0fff-46d1-8516-b2c1f893f3df');
+VALUES ('e1a437f0-f132-4c56-b1a4-1eda067fa7d0', 'Not mallards', '3');
 
 INSERT INTO salts
 VALUES ('319e16c9-5304-4d9b-9eb8-0ec9392991ac', '2d4fbe77bd449bc25b26d3aeeee8ca01f61cb7a76f07993805432311d10426d2');

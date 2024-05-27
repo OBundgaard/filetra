@@ -1,15 +1,38 @@
+import hashlib
 import json
 
-from flask import Flask, request, render_template, send_from_directory
+from flask import Flask, request, render_template, send_from_directory, session
 import os
 
+import crypto_utils
+
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 
 
 def get_allowed_groups():
-    with open('./data/user.json', 'r') as file:
-        numbers = json.load(file)
-    return [str(num) for num in numbers]
+    return ["1", "2", "3"]
+
+
+def read_write_json(new_data, filename='data/users.json'):
+    with open(filename, 'r') as file:
+        data = json.load(file)
+
+    # Step 2: Append the new account details to the account_details list
+    data['account_details'].append(new_data)
+
+    # Step 3: Write the updated JSON data back to the file
+    with open(filename, 'w') as file:
+        json.dump(data, file, indent=4)
+
+
+def load_users():
+    with open('data/users.json', 'r') as file:
+        return json.load(file)['account_details']
+
+
+def verify_password(stored_password, salt, provided_password):
+    return stored_password == crypto_utils.hash_password(provided_password, bytes.fromhex(salt)).hex()
 
 
 @app.route('/')
@@ -18,7 +41,8 @@ def main():
     elements = os.listdir(path)
 
     allowed_groups = get_allowed_groups()
-    groups = [element for element in elements if not os.path.isfile(os.path.join(path, element)) and element in allowed_groups]
+    groups = [element for element in elements if
+              not os.path.isfile(os.path.join(path, element)) and element in allowed_groups]
 
     return render_template("index.html", groups=groups)
 
@@ -31,7 +55,8 @@ def view_files():
     files = os.listdir(path)
     filenames = [f for f in files if os.path.isfile(os.path.join(path, f))]
 
-    return render_template("view.html", files=filenames, group_id=args["group_id"], allowed=(args["group_id"] in get_allowed_groups()))
+    return render_template("view.html", files=filenames, group_id=args["group_id"],
+                           allowed=(args["group_id"] in get_allowed_groups()))
 
 
 @app.route('/upload', methods=['POST'])
@@ -71,12 +96,49 @@ def download_file():
 # == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return "Signup"
+    return render_template("signup.html")
+
+
+@app.route('/post_signup', methods=['GET'])
+def post_signup():
+    if request.method == 'GET':
+        args = request.args
+        email = args['email']
+        password = args['password']
+        salt = crypto_utils.generate_salt()
+        hashed_password = crypto_utils.hash_password(password, salt)
+
+        account_details = {
+            'email': email,
+            'salt': salt.hex(),
+            'hashed_password': hashed_password.hex()
+        }
+
+        read_write_json(account_details)
+
+        return f'Email: {email} - Password: {password}'
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    return "Login"
+    return render_template("login.html")
+
+
+@app.route('/post_login', methods=['GET'])
+def post_login():
+    args = request.args
+    email = args['email']
+    password = args['password']
+
+    users = load_users()
+    for user in users:
+        if user['email'] == email:
+            if verify_password(user['hashed_password'], user['salt'], password):
+                session['user'] = email
+                return f'Welcome: {email}'
+            else:
+                return f'wrong but: {email},{password}'
+    return 'Invalid Credentials'
 
 
 @app.route('/account/<user_id>', methods=['GET'])
@@ -92,6 +154,8 @@ def group(group_id):
 @app.route('/group/<group_id>/folder/<folder_id>', methods=['GET'])
 def folder(group_id, folder_id):
     return f'Group: {group_id} - Folder: {folder_id}'
+
+
 # == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
     <div class="panel-container">
         <div class="panel primary-panel double-panel">
-            <form>
+            <form action="/post_login" method="get">
                 <div class="information">
                     <span class="title">Login to Your Account</span>
                     <span class="paragraph">We can’t wait to see what you have to share</span>
@@ -33,7 +33,7 @@
                     <span class="paragraph" style="text-align: center; color: var(--light-text);">Sign up and start sharing files with friends,<br>family, and co-workers</span>
                     <span class="paragraph" style="text-align: center; color: var(--light-text);">It is only a few clicks away and it is<br>easier than ever to share any kind of file<br>with anyone</span>
                 </div>
-                <button class="inverted-primary-button">Sign up</button>
+                <button class="inverted-primary-button" onclick="location.href='signup'">Sign up</button>
             </div>
         </div>
     </div> 

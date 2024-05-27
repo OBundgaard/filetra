@@ -1,14 +1,10 @@
 {
     "account_details": [
         {
+            "userid": "1f08becd-41af-4949-972d-23e6d677c2ff",
             "email": "maamoun@filetra.com",
-            "salt": "ecc50e0918cb566c84ea1c5ac209a167156d359778c2686eeeeffe4a45b58e53",
-            "hashed_password": "013e8591a9df8f60dadf9e40cf0560079f284b39f5a8a6d426e444cf50b46f77"
-        },
-        {
-            "email": "oliver@filetra.com",
-            "salt": "95e2ce3aed03e4b924ae40478c0975eedd3fda5ba3a6d823991fbffb2e389e82",
-            "hashed_password": "bf68ee6697918c3627719e46ac423876b0ad24631f4aa5be2639030d96cedbb1"
+            "salt": "10529ad2efeac9347b00d458bc46a8465e88ed730a8f78965294deb69b137bec",
+            "hashed_password": "0df1ac09212c8c6ad25692d329386ef440d2a9619011256ce47d001cc0b51bb8"
         }
     ]
 }

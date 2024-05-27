@@ -1,10 +1,10 @@
-import hashlib
 import json
 
-from flask import Flask, request, render_template, send_from_directory, session
+from flask import Flask, request, render_template, send_from_directory, session, redirect
 import os
 
 import crypto_utils
+import utils
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -37,6 +37,8 @@ def verify_password(stored_password, salt, provided_password):
 
 @app.route('/')
 def main():
+    if not session.get('user'):
+        return redirect("/login")
     path = f'./files'
     elements = os.listdir(path)
 
@@ -96,7 +98,10 @@ def download_file():
 # == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template("signup.html")
+    if not session.get("user"):
+        return render_template("signup.html")
+    else:
+        return redirect("/")
 
 
 @app.route('/post_signup', methods=['GET'])
@@ -107,8 +112,10 @@ def post_signup():
         password = args['password']
         salt = crypto_utils.generate_salt()
         hashed_password = crypto_utils.hash_password(password, salt)
+        userid = utils.generate_uuid()
 
         account_details = {
+            'userid': userid,
             'email': email,
             'salt': salt.hex(),
             'hashed_password': hashed_password.hex()
@@ -121,7 +128,10 @@ def post_signup():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    if not session.get("user"):
+        return render_template("login.html")
+    else:
+        return redirect("/")
 
 
 @app.route('/post_login', methods=['GET'])
@@ -135,7 +145,7 @@ def post_login():
         if user['email'] == email:
             if verify_password(user['hashed_password'], user['salt'], password):
                 session['user'] = email
-                return f'Welcome: {email}'
+                return redirect("/")
             else:
                 return f'wrong but: {email},{password}'
     return 'Invalid Credentials'

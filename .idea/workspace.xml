@@ -4,18 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="Upload and download is now working for the basics">
+    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="made login and signup">
+      <change afterPath="$PROJECT_DIR$/data/groups.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db_dummy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_dummy.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/5211bc5d-0fff-46d1-8516-b2c1f893f3df/mallard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/files/2/mallard.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/91a13777-c539-464e-b1a1-d9cd7aa55562/17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097/cat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/files/1/cat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Black.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-BlackItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-MediumItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-MediumItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-Thin.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/Roboto/Roboto-ThinItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Roboto/Roboto-ThinItalic.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715680278489</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="made login and signup">
+      <option name="closed" value="true" />
+      <created>1716804534250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716804534250</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,10 +162,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Upload and download is now working for the basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload and download is now working for the basics" />
+    <MESSAGE value="made login and signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="made login and signup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/filetra$utils.coverage" NAME="utils Coverage Results" MODIFIED="1716280582081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716804146643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716807997410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="Added db dummy data script" />
+    <list default="true" id="0cd7cb9e-e010-4f66-b51c-fa0b7b9f9299" name="Changes" comment="frontend done">
+      <change afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_13_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_13_35__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +23,20 @@
       <list>
         <option value="Flask Main" />
         <option value="package.json" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -35,23 +54,18 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2gS0xRdVhbY31lXIaNgERNqFQNo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Flask server.filetra.executor&quot;: &quot;Run&quot;,
-    &quot;Python.crypto_utils.executor&quot;: &quot;Run&quot;,
     &quot;Python.utils.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/olive/PycharmProjects/filetra/files/3&quot;,
@@ -60,6 +74,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -69,11 +84,11 @@
       <recent name="C:\Users\olive\PycharmProjects\filetra\files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\olive\PycharmProjects\filetra\files\91a13777-c539-464e-b1a1-d9cd7aa55562\17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097" />
-      <recent name="C:\Users\olive\PycharmProjects\filetra\data" />
+      <recent name="C:\Users\Oleie\PycharmProjects\filetra\static" />
+      <recent name="C:\Users\Oleie\PycharmProjects\filetra\files\2" />
+      <recent name="C:\Users\Oleie\PycharmProjects\filetra\files\2\17f5cf4d-8c15-4886-b6eb-2c9e0c1e7097" />
+      <recent name="C:\Users\Oleie\PycharmProjects\filetra\files\1" />
       <recent name="C:\Users\olive\PycharmProjects\filetra\files\2" />
-      <recent name="C:\Users\olive\PycharmProjects\filetra\files\1" />
-      <recent name="C:\Users\olive\PycharmProjects\filetra\files" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,10 +128,7 @@
       <workItem from="1715692129722" duration="22000" />
       <workItem from="1715847061173" duration="8918000" />
       <workItem from="1716278903535" duration="776000" />
-      <workItem from="1716290928125" duration="3398000" />
-      <workItem from="1716367115776" duration="34000" />
-      <workItem from="1716367963624" duration="48000" />
-      <workItem from="1716537386832" duration="174000" />
+      <workItem from="1716810042603" duration="2806000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -134,48 +146,28 @@
       <option name="project" value="LOCAL" />
       <updated>1715680278489</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added docs to the uuid generation method">
+    <task id="LOCAL-00003" summary="made login and signup">
       <option name="closed" value="true" />
-      <created>1716280663645</created>
+      <created>1716804534250</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1716280663645</updated>
+      <updated>1716804534250</updated>
     </task>
-    <task id="LOCAL-00004" summary="Added db setup script in SQL">
-      <option name="closed" value="true" />
-      <created>1716287431037</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1716287431037</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added db dummy data script">
-      <option name="closed" value="true" />
-      <created>1716537553675</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1716537553675</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Upload and download is now working for the basics" />
-    <MESSAGE value="Added docs to the uuid generation method" />
-    <MESSAGE value="Added db setup script in SQL" />
-    <MESSAGE value="Added db dummy data script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added db dummy data script" />
+    <MESSAGE value="made login and signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="made login and signup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/filetra$crypto_utils.coverage" NAME="crypto_utils Coverage Results" MODIFIED="1716292637605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716291359742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/filetra$utils.coverage" NAME="utils Coverage Results" MODIFIED="1716287051990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/filetra$utils.coverage" NAME="utils Coverage Results" MODIFIED="1716280582081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/filetra$filetra.coverage" NAME="filetra Coverage Results" MODIFIED="1716813276452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

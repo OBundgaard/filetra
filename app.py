@@ -1,6 +1,6 @@
 import json
 
-from flask import Flask, request, render_template, send_from_directory, session, redirect
+from flask import Flask, request, render_template, send_from_directory, session, redirect, flash
 import os
 
 import crypto_utils
@@ -113,6 +113,10 @@ def post_signup():
         salt = crypto_utils.generate_salt()
         hashed_password = crypto_utils.hash_password(password, salt)
         userid = utils.generate_uuid()
+
+        if not utils.validate_input(password, 8):
+            error = "Password must be 8 characters long"
+            return render_template("error.html", error=error), {"Refresh": "2; url=/signup"}
 
         account_details = {
             'userid': userid,

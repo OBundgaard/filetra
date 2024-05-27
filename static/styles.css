@@ -221,7 +221,7 @@ button:active, input[type="submit"]:active {
 }
 
 /* INPUT STYLES */
-input[type='text'], input[type="password"] {
+input[type='text'], input[type="password"], input[type='email'] {
     padding: var(--spacer-2);
     border: none;
     border-radius: 24px;
@@ -234,13 +234,13 @@ input[type='text'], input[type="password"] {
     width: 512px;
 }
 
-input[type='text'].invalid, input[type="password"].invalid {
+input[type='text'].invalid, input[type="password"].invalid, input[type='email'].invalid {
     background-color: var(--lighter-error);
     color: var(--error);
 }
 
 
-input[type='text']:focus, input[type="password"] {
+input[type='text']:focus, input[type="password"], input[type='email'] {
     outline: none;
 }
 

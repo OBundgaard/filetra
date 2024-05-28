@@ -46,6 +46,10 @@ def get_group_ids(user_id: str) -> list[str]:
     with open('data/groups.json', 'r') as file:
         data = json.load(file)
         groups = []
+
+        if user_id not in data:
+            return groups
+
         for group in data[user_id]:
             groups.append(group['id'])
 
@@ -72,6 +76,10 @@ def get_permissions(user_id: str, group_id: str) -> dict:
     with open('data/groups.json', 'r') as file:
         data = json.load(file)
         permissions = {}
+
+        if user_id not in data:
+            return permissions
+
         for group in data[user_id]:
             if group['id'] == group_id:
                 permissions = group['permissions']

@@ -36,18 +36,16 @@ def verify_password(stored_password, salt, provided_password):
     return stored_password == crypto_utils.hash_password(provided_password, bytes.fromhex(salt)).hex()
 
 
-@app.route('/')
-def main():
+def handle_user_redirect():
     if not session.get('user'):
         return redirect("/login")
-    path = f'./files'
-    elements = os.listdir(path)
 
-    allowed_groups = get_allowed_groups()
-    groups = [element for element in elements if
-              not os.path.isfile(os.path.join(path, element)) and element in allowed_groups]
+    return redirect(f'/user/{session['user']}')
 
-    return render_template("index.html", groups=groups)
+
+@app.route('/')
+def main():
+    return handle_user_redirect()
 
 
 @app.route('/upload', methods=['POST'])
@@ -137,8 +135,8 @@ def post_login():
     for user in users:
         if user['email'] == email:
             if verify_password(user['hashed_password'], user['salt'], password):
-                session['user'] = email
-                return redirect("/")
+                session['user'] = user['userid']
+                return redirect(f'/user/{session['user']}')
             else:
                 return f'wrong but: {email},{password}'
     return 'Invalid Credentials'
@@ -149,7 +147,10 @@ def view_groups(user_id):
 
     group_ids = data_handler.get_group_ids(user_id)
 
-    return render_template('user.html', user_id=user_id, groups=group_ids)
+    if session['user'] == user_id:
+        return render_template('user.html', user_id=user_id, groups=group_ids)
+    else:
+        return redirect('/')
 
 
 @app.route('/user/<user_id>/group/<group_id>', methods=['GET'])
@@ -158,10 +159,10 @@ def view_files(user_id, group_id):
     files = data_handler.get_files(group_id)
     permissions = data_handler.get_permissions(user_id, group_id)
 
-    if permissions:
+    if permissions and session['user'] == user_id:
         return render_template('group.html', group_id=group_id, files=files, allow_add=permissions['allow_add'], allow_delete=permissions['allow_delete'])
     else:
-        return redirect("/")
+        return redirect('/')
 
 
 # == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==

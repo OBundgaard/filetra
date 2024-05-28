@@ -4,6 +4,7 @@ from flask import Flask, request, render_template, send_from_directory, session,
 import os
 
 import crypto_utils
+import data_handler
 import utils
 
 app = Flask(__name__)
@@ -47,18 +48,6 @@ def main():
               not os.path.isfile(os.path.join(path, element)) and element in allowed_groups]
 
     return render_template("index.html", groups=groups)
-
-
-@app.route('/view', methods=['GET', 'POST'])
-def view_files():
-    args = request.args
-
-    path = f'./files/{args["group_id"]}'
-    files = os.listdir(path)
-    filenames = [f for f in files if os.path.isfile(os.path.join(path, f))]
-
-    return render_template("view.html", files=filenames, group_id=args["group_id"],
-                           allowed=(args["group_id"] in get_allowed_groups()))
 
 
 @app.route('/upload', methods=['POST'])
@@ -155,19 +144,24 @@ def post_login():
     return 'Invalid Credentials'
 
 
-@app.route('/account/<user_id>', methods=['GET'])
-def account(user_id):
-    return f'User: {user_id}'
+@app.route('/user/<user_id>', methods=['GET', 'POST'])
+def view_groups(user_id):
+
+    groups = data_handler.get_groups(user_id)
+
+    return render_template('user.html', user_id=user_id, groups=groups)
 
 
-@app.route('/group/<group_id>', methods=['GET'])
-def group(group_id):
-    return f'Group: {group_id}'
+@app.route('/user/<user_id>/group/<group_id>', methods=['GET'])
+def view_files(user_id, group_id):
 
+    files = data_handler.get_files(group_id)
+    permissions = data_handler.get_permissions(user_id, group_id)
 
-@app.route('/group/<group_id>/folder/<folder_id>', methods=['GET'])
-def folder(group_id, folder_id):
-    return f'Group: {group_id} - Folder: {folder_id}'
+    if permissions:
+        return render_template('group.html', files=files, allow_add=permissions['allow_add'], allow_delete=permissions['allow_delete'])
+    else:
+        return redirect("/")
 
 
 # == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==

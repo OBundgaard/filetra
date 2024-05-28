@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    {% if allow_add %}
+        <h3>Upload</h3>
+        <form action = "/upload?group_id={{ group_id }}" method = "post" enctype="multipart/form-data">
+            <input type="file" name="file" /><br><br>
+            <input type = "submit" value="Upload">
+        </form><br>
+    {% endif %}
+    <hr>
+    <h3>Download</h3>
+    <ul style="list-style: none; padding: 0;">
+        {% for file in files %}
+            <li style="margin-bottom: 16px">
+                <div style="padding: 16px; background-color: #F1F1F1; max-height: 48px; width: 256px; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="/download?group_id={{ group_id }}&filename={{ file }}">
+                        {{ file }}
+                    </a>
+                    {% if allow_delete %}
+                        <button>Delete</button>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -147,9 +147,9 @@ def post_login():
 @app.route('/user/<user_id>', methods=['GET', 'POST'])
 def view_groups(user_id):
 
-    groups = data_handler.get_groups(user_id)
+    group_ids = data_handler.get_group_ids(user_id)
 
-    return render_template('user.html', user_id=user_id, groups=groups)
+    return render_template('user.html', user_id=user_id, groups=group_ids)
 
 
 @app.route('/user/<user_id>/group/<group_id>', methods=['GET'])
@@ -159,7 +159,7 @@ def view_files(user_id, group_id):
     permissions = data_handler.get_permissions(user_id, group_id)
 
     if permissions:
-        return render_template('group.html', files=files, allow_add=permissions['allow_add'], allow_delete=permissions['allow_delete'])
+        return render_template('group.html', group_id=group_id, files=files, allow_add=permissions['allow_add'], allow_delete=permissions['allow_delete'])
     else:
         return redirect("/")
 

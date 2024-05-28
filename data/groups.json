@@ -5,7 +5,6 @@
       "is_owner": true,
       "permissions": {
         "allow_add": true,
-        "allow_edit": true,
         "allow_delete": true
       }
     },

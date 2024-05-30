@@ -2,7 +2,7 @@
     "account_details": [
         {
             "userid": "1f08becd-41af-4949-972d-23e6d677c2ff",
-            "email": "maamoun@filetra.com",
+            "email": "test@filetra.com",
             "salt": "10529ad2efeac9347b00d458bc46a8465e88ed730a8f78965294deb69b137bec",
             "hashed_password": "0df1ac09212c8c6ad25692d329386ef440d2a9619011256ce47d001cc0b51bb8"
         }
